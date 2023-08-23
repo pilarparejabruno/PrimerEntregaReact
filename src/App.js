@@ -1,11 +1,13 @@
 import "./App.css";
 import Navbar from "./components/Navbar/Navbar";
+import CartWidget from "./components/CartWidget/CartWidget";
 
 function App() {
   return (
-    <div>
-      <Navbar />
-    </div>
+    <header>
+      <Navbar />;
+      <CartWidget />
+    </header>
   );
 }
 
