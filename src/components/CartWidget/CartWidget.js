@@ -7,7 +7,7 @@ const CartWidget = () => {
     <div className="cartWidget">
       <button
         type="button"
-        class="btn "
+        className="btn "
         data-bs-toggle="modal"
         data-bs-target="#exampleModal"
       >
