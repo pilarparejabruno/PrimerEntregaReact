@@ -1,5 +1,6 @@
 import "./Navbar.css";
 import logo from "../Logo/raices-sw-logo.png";
+import CartWidget from "../CartWidget/CartWidget";
 
 const Navbar = () => {
   return (
@@ -62,6 +63,7 @@ const Navbar = () => {
           </div>
         </div>
       </nav>
+      <CartWidget />
     </div>
   );
 };
