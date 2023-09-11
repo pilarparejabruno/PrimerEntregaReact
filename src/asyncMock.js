@@ -6,6 +6,7 @@ const products = [
     description: "hidratante facial",
     brand: "Kamikaze",
     price: 5800,
+    stock: 5,
     img: "/fotosproductos/fotoproducto-cremacielo.jpg",
   },
   {
@@ -15,6 +16,7 @@ const products = [
     description: "espuma de limpieza facial",
     brand: "Kamikaze",
     price: 3400,
+    stock: 10,
     img: "/fotosproductos/fotoproducto-espumanube.jpg",
   },
   {
@@ -24,6 +26,7 @@ const products = [
     description: "exfoliante facial",
     brand: "Kamikaze",
     price: 3800,
+    stock: 1,
     img: "/fotosproductos/fotoproducto-scrubfacial.jpg",
   },
   {
@@ -33,6 +36,7 @@ const products = [
     description: "mascarilla de arcillas facial",
     brand: "Kamikaze",
     price: 3000,
+    stock: 3,
     img: "/fotosproductos/fotoproducto-mascarillaneptuno.jpg",
   },
   {
@@ -42,6 +46,7 @@ const products = [
     description: "shampoo fortalecedor y reparador",
     brand: "Kamikaze",
     price: 2500,
+    stock: 1,
     img: "/fotosproductos/fotoproducto-shampoo.jpg",
   },
   {
@@ -51,6 +56,7 @@ const products = [
     description: "hidratacion intensa",
     brand: "Kamikaze",
     price: 2500,
+    stock: 2,
     img: "/fotosproductos/fotoproducto-acondicionador.jpg",
   },
   {
@@ -60,6 +66,7 @@ const products = [
     description: "balsamo labial con color y aroma",
     brand: "Kamikaze",
     price: 2270,
+    stock: 1,
     img: "/fotosproductos/fotoproducto-balsamolabial.jpg",
   },
   {
@@ -69,6 +76,7 @@ const products = [
     description: "Pad facial reutilizable",
     brand: "Kamikaze",
     price: 900,
+    stock: 3,
     img: "/fotosproductos/fotoproducto-padxl.jpg",
   },
   {
@@ -78,6 +86,7 @@ const products = [
     description: "Piedra para masaje facial",
     brand: "Kamikaze",
     price: 3000,
+    stock: 3,
     img: "/fotosproductos/fotoproducto-guasha.jpg",
   },
   {
@@ -87,6 +96,7 @@ const products = [
     description: "Tonico hidratnate",
     brand: "Kamikaze",
     price: 3860,
+    stock: 3,
     img: "/fotosproductos/fotoproducto-hidrolatoderosas.jpg",
   },
   {
@@ -96,6 +106,7 @@ const products = [
     description: "Aceite controlador de sebo",
     brand: "Kamikaze",
     price: 2800,
+    stock: 2,
     img: "/fotosproductos/fotoproducto-aceitedejojoba.jpg",
   },
   {
@@ -105,6 +116,7 @@ const products = [
     description: "contorno de ojos",
     brand: "Kamikaze",
     price: 5000,
+    stock: 2,
     img: "/fotosproductos/fotoproducto-rollonmagnolia.jpg",
   },
   {
@@ -114,6 +126,7 @@ const products = [
     description: "Agua micelar",
     brand: "Kamikaze",
     price: 3000,
+    stock: 3,
     img: "/fotosproductos/fotoproducto-aguamicelar.jpg",
   },
 ];
@@ -123,5 +136,13 @@ export const getProducts = () => {
     setTimeout(() => {
       resolve(products);
     }, 3000);
+  });
+};
+
+export const getProductById = (productId) => {
+  return new Promise((resolve) => {
+    setTimeout(() => {
+      resolve(products.find((prod) => prod.id === productId));
+    }, 500);
   });
 };
