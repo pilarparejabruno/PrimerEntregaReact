@@ -31,7 +31,7 @@
 .nav__item:hover::before {
   width: 100%;
 }
-.nav__item .nav__link {
+.nav__item {
   text-decoration: none;
   text-align: center;
   font-family: "Montserrat", sans-serif;

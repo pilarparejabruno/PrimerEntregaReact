@@ -4,11 +4,9 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 //IMPORT PAGES
 import Products from "./pages/Products/Products";
-import Home from "./pages/Home/home";
+import Home from "./pages/Home/Home";
+import ProductDetail from "./pages/ProductDetail/ProductDetail";
 
-/* import ItemListContainer from "./components/ItemListContainer/ItemListContainer"; */
-/* import ItemDetailContainer from "./components/ItemDetailContainer/ItemDetailContainer"; */
-/* import Video from "./components/Video/Video"; */
 import Navbar from "./components/Navbar/Navbar";
 import Footer from "./components/Footer/Footer";
 
@@ -20,11 +18,11 @@ function App() {
     <BrowserRouter>
       <header>
         <Navbar />
-        <Video />
       </header>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/products" element={<Products />} />
+        <Route path="/productos" element={<Products />} />
+        <Route path="/item/:itemId" element={<ProductDetail />} />
       </Routes>
       <footer>
         <Footer />

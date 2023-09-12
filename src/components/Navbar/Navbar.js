@@ -1,6 +1,26 @@
 import "./Navbar.css";
 import logo from "../Logo/raices-sw-logo.png";
 import CartWidget from "../CartWidget/CartWidget";
+import { Link } from "react-router-dom";
+
+const routes = [
+  {
+    path: "/",
+    linkname: "HOME",
+  },
+  {
+    path: "/productos",
+    linkname: "PRODUCTOS",
+  },
+  {
+    path: "/contacto",
+    linkname: "CONTACTO",
+  },
+  {
+    path: "/preguntas-frecuentes",
+    linkname: "PREGUNTAS FRECUENTES",
+  },
+];
 
 const Navbar = () => {
   return (
@@ -35,8 +55,25 @@ const Navbar = () => {
             className="collapse navbar-collapse d-flex justify-content-center align-items-center text-center"
             id="navbar-toggler"
           >
-            <ul className="navbar-nav mb-5">
-              <li className="nav__item">
+            <ul className="navbar-nav mb-5 ">
+              {routes.map(({ path, linkname }) => (
+                <Link to={path} className="nav__item ">
+                  {linkname}
+                </Link>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <CartWidget />
+    </div>
+  );
+};
+
+export default Navbar;
+
+{
+  /* <li className="nav__item">
                 <a className="nav__link mx-4" href="">
                   NOSOTROS
                 </a>
@@ -58,14 +95,5 @@ const Navbar = () => {
               </li>
               <li className="nav__item">
                 <i className="fa-solid fa-cart-shopping"></i>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </nav>
-      <CartWidget />
-    </div>
-  );
-};
-
-export default Navbar;
+              </li> */
+}
