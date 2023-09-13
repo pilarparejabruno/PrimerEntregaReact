@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { getProducts } from "../../asyncMock";
 import ItemList from "../ItemList/ItemList";
 import { Link } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import "./ItemListContainer.css";
 
 const RoutesCategories = [
@@ -25,15 +26,19 @@ const RoutesCategories = [
 
 const ItemListContainer = ({ greeting }) => {
   const [products, setProducts] = useState([]);
-
   const [loading, setLoading] = useState(false);
+  const { categoryId } = useParams();
 
   useEffect(() => {
     setLoading(true);
 
     getProducts()
       .then((response) => {
-        setProducts(response);
+        if (categoryId) {
+          setProducts(response.filter((item) => item.category === categoryId));
+        } else {
+          setProducts(response);
+        }
       })
       .catch((error) => {
         console.error(error);
@@ -41,7 +46,7 @@ const ItemListContainer = ({ greeting }) => {
       .finally(() => {
         setLoading(false);
       });
-  }, []);
+  }, [categoryId]);
 
   if (loading)
     return (
@@ -52,7 +57,7 @@ const ItemListContainer = ({ greeting }) => {
 
   return (
     <>
-      <h1 className="text-center mt-5 mb-2">PRODUCTOS</h1>
+      <h1 className="text-center mt-5 mb-2 title">PRODUCTOS</h1>
       <div className="category-container text-center">
         <div className="btn-group" role="group" aria-label="Basic example">
           {RoutesCategories.map(({ path, linkname }) => (

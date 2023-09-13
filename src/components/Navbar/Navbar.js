@@ -27,7 +27,7 @@ const Navbar = () => {
     <div>
       <nav className="navbar">
         <div className="container mx-auto d-block">
-          <a className="navbar-brand" href="#">
+          <Link className="navbar-brand" to="/">
             <img
               src={logo}
               alt="Raíces logo"
@@ -35,7 +35,7 @@ const Navbar = () => {
               width="350"
               height="100"
             />
-          </a>
+          </Link>
         </div>
       </nav>
       <nav className="navbar navbar-expand-lg">

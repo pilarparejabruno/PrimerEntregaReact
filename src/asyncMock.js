@@ -26,7 +26,7 @@ const products = [
     description: "exfoliante facial",
     brand: "Kamikaze",
     price: 3800,
-    stock: 1,
+    stock: 3,
     img: "/fotosproductos/fotoproducto-scrubfacial.jpg",
   },
   {

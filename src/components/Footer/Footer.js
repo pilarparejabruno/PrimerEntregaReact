@@ -1,4 +1,20 @@
 import "./Footer.css";
+import { Link } from "react-router-dom";
+
+const routes = [
+  {
+    path: "/",
+    linkname: "HOME",
+  },
+  {
+    path: "/productos",
+    linkname: "PRODUCTOS",
+  },
+  {
+    path: "/preguntas-frecuentes",
+    linkname: "PREGUNTAS FRECUENTES",
+  },
+];
 
 const Footer = () => {
   return (
@@ -23,9 +39,7 @@ const Footer = () => {
                 </a>
               </li>
               <li className="social-item">
-                <a href="" className="social-link">
-                  <i className="social-icon fa-brands fa-instagram"></i>
-                </a>
+                <a href="" className="social-link"></a>
               </li>
             </ul>
             <p className="paragraph text-center">COPYRIGHT RAÍCES - 2023</p>
@@ -34,22 +48,12 @@ const Footer = () => {
             </p>
           </div>
           <div className="col-md-4">
-            <ul className="navbar-nav mb-5 d-flex">
-              <li className="nav__item">
-                <a className="nav__link mx-4" href="./index.html">
-                  Home
-                </a>
-              </li>
-              <li className="nav__item">
-                <a className="nav__link mx-4" href="./pages/productos.html">
-                  Productos
-                </a>
-              </li>
-              <li className="nav__item">
-                <a className="nav__link mx-4" href="">
-                  Preguntas frecuentes
-                </a>
-              </li>
+            <ul className="navbar-nav mb-5 ">
+              {routes.map(({ path, linkname }) => (
+                <Link to={path} className="nav__item ">
+                  {linkname}
+                </Link>
+              ))}
             </ul>
           </div>
         </div>

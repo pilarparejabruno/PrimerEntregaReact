@@ -22,6 +22,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/productos" element={<Products />} />
+        <Route path="/category/:categoryId" element={<Products />} />
         <Route path="/item/:itemId" element={<ProductDetail />} />
       </Routes>
       <footer>
