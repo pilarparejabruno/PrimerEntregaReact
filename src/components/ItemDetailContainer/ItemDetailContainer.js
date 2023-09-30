@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { getProductById } from "../../asyncMock";
+import { getItem } from "../../firebase-config/services/items";
 import ItemDetail from "../ItemDetail/ItemDetail";
 import { useParams } from "react-router-dom";
 
@@ -11,9 +11,10 @@ const ItemDetailContainer = () => {
 
   useEffect(() => {
     setLoading(true);
-    getProductById(+itemId)
-      .then((response) => {
-        setProduct(response);
+
+    getItem(itemId)
+      .then((snapshot) => {
+        setProduct({ id: snapshot.id, ...snapshot.data() });
       })
       .catch((error) => {
         console.error(error);

@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
-import { getAllProducts } from "../../services/products";
-/* import { getProducts } from "../../asyncMock"; */
+import { getAllProducts } from "../../firebase-config/services/products";
 import ItemList from "../ItemList/ItemList";
 import { Link } from "react-router-dom";
 import { useParams } from "react-router-dom";
@@ -39,7 +38,7 @@ const ItemListContainer = () => {
       .finally(() => {
         setLoading(false);
       });
-  });
+  }, [categoryId]);
 
   if (loading)
     return (
