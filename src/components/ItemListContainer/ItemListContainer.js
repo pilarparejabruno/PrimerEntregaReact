@@ -33,7 +33,13 @@ const ItemListContainer = () => {
     setLoading(true);
 
     getAllProducts()
-      .then(setProducts)
+      .then((response) => {
+        if (categoryId) {
+          setProducts(response.filter((item) => item.category === categoryId));
+        } else {
+          setProducts(response);
+        }
+      })
       .catch(console.error)
       .finally(() => {
         setLoading(false);

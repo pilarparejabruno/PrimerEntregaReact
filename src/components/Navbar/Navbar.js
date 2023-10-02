@@ -71,29 +71,3 @@ const Navbar = () => {
 };
 
 export default Navbar;
-
-{
-  /* <li className="nav__item">
-                <a className="nav__link mx-4" href="">
-                  NOSOTROS
-                </a>
-              </li>
-              <li className="nav__item">
-                <a className="nav__link mx-4" href="./pages/productos.html">
-                  PRODUCTOS
-                </a>
-              </li>
-              <li className="nav__item">
-                <a className="nav__link mx-4" href="">
-                  CONTACTO
-                </a>
-              </li>
-              <li className="nav__item">
-                <a className="nav__link mx-4" href="">
-                  PREGUNTAS FRECUENTES
-                </a>
-              </li>
-              <li className="nav__item">
-                <i className="fa-solid fa-cart-shopping"></i>
-              </li> */
-}

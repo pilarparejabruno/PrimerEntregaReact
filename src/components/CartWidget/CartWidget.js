@@ -1,20 +1,21 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCartShopping } from "@fortawesome/free-solid-svg-icons";
 import "./CartWidget.css";
+import { useContext } from "react";
+import { CartContext } from "../../context/CartContext";
+import { Link } from "react-router-dom";
 
 const CartWidget = () => {
+  const { quantityInCarrito } = useContext(CartContext);
+
   return (
     <div className="cartWidget">
-      <button
-        type="button"
-        className="btn "
-        data-bs-toggle="modal"
-        data-bs-target="#exampleModal"
+      <Link
+        to="/cart" /* style={{display: TotalQuantity > 0 ? "block" : "none"}} */
       >
-        <p>
-          0 <FontAwesomeIcon icon={faCartShopping} />
-        </p>
-      </button>
+        <FontAwesomeIcon icon={faCartShopping} />
+        <span>{quantityInCarrito()}</span>
+      </Link>
     </div>
   );
 };
