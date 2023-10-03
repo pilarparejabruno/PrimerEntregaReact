@@ -11,6 +11,7 @@ import ProductDetail from "./pages/ProductDetail/ProductDetail";
 import Navbar from "./components/Navbar/Navbar";
 import Footer from "./components/Footer/Footer";
 import Cart from "./components/Cart/Cart";
+import Checkout from "./components/Checkout/Checkout";
 
 //IMPORT CONTEXT
 import { CartProvider } from "./context/CartContext";
@@ -31,6 +32,7 @@ function App() {
           <Route path="/category/:categoryId" element={<Products />} />
           <Route path="/item/:itemId" element={<ProductDetail />} />
           <Route path="/cart" element={<Cart />} />
+          <Route path="/checkout" element={<Checkout />} />
         </Routes>
       </CartProvider>
       <footer>

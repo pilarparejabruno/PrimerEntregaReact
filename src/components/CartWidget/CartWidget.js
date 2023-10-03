@@ -10,9 +10,7 @@ const CartWidget = () => {
 
   return (
     <div className="cartWidget">
-      <Link
-        to="/cart" /* style={{display: TotalQuantity > 0 ? "block" : "none"}} */
-      >
+      <Link to="/cart">
         <FontAwesomeIcon icon={faCartShopping} />
         <span>{quantityInCarrito()}</span>
       </Link>

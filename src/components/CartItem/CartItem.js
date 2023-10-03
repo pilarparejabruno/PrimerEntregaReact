@@ -5,27 +5,27 @@ const CartItem = ({ id, img, name, price, quantity }) => {
   const { removeItem } = useContext(CartContext);
 
   return (
-    <table class="table d-flex justify-content-center">
-      <tbody>
-        <tr>
-          <td scope="row">
-            <img
-              src={img}
-              className="card-img-top "
-              alt={name}
-              width="600"
-              height="370"
-            />
-          </td>
-          <td>{name}</td>
-          <td>{price * quantity}</td>
-          <td>{quantity}</td>
+    <div className="container text-center">
+      <div className="row d-flex justify-content-center">
+        <div className="col-md-2 mb-3">
+          <img src={img} className="" alt={name} width="100" height="100" />
+        </div>
+        <div className="col-md-2">
+          <p>{name}</p>
+        </div>
+        <div className="col-md-2">
+          <p>{price * quantity}</p>
+        </div>
+        <div className="col-md-2">
+          <p>{quantity}</p>
+        </div>
+        <div className="col-md-2">
           <button className="btn btn-danger " onClick={() => removeItem(id)}>
             X
           </button>
-        </tr>
-      </tbody>
-    </table>
+        </div>
+      </div>
+    </div>
   );
 };
 
@@ -64,3 +64,27 @@ export default CartItem;
     </div>
   </div>
 </div> */
+
+{
+  /* <table class="table d-flex justify-content-center  ">
+<tbody>
+  <tr>
+    <td className="ms-5">
+      <img
+        src={img}
+        className="card-img-top "
+        alt={name}
+        width="200"
+        height="100"
+      />
+    </td>
+    <td className="ms-5">{name}</td>
+    <td className="ms-5">{price * quantity}</td>
+    <td>{quantity}</td>
+    <button className="btn btn-danger " onClick={() => removeItem(id)}>
+      X
+    </button>
+  </tr>
+</tbody>
+</table> */
+}

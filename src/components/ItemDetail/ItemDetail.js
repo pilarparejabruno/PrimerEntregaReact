@@ -15,6 +15,7 @@ const ItemDetail = ({ id, img, name, category, description, price, stock }) => {
       id,
       name,
       price,
+      img,
     };
     addItem(item, quantity);
   };
