@@ -19,18 +19,19 @@ const Checkout = () => {
 
   const { cart, totalBuys, clearCart } = useContext(CartContext);
 
-  const createOrder = async ({ name, phone, email }) => {
+  const createOrder = async ({ name, surname, phone, email }) => {
     setLoading(true);
 
     try {
       const objOrder = {
         buyer: {
           name,
+          surname,
           phone,
           email,
         },
         items: cart,
-        total: totalBuys,
+        total: totalBuys(),
         date: Timestamp.fromDate(new Date()),
       };
 
@@ -66,13 +67,13 @@ const Checkout = () => {
         await batch.commit();
 
         const orderRef = collection(db, "orders");
-
+        console.log(objOrder);
         const orderAdded = await addDoc(orderRef, objOrder);
 
         setOrderiD(orderAdded.id);
         clearCart();
       } else {
-        console.error("Hay productos qu estan fuera de stock");
+        console.error("Hay productos que estan fuera de stock");
       }
     } catch (error) {
       console.log(error);
@@ -82,15 +83,17 @@ const Checkout = () => {
   };
 
   if (loading) {
-    return <h1>Se esta generando su orden...</h1>;
+    return <h1 className="text-center title">Se esta generando su orden...</h1>;
   }
 
   if (orderId) {
-    return <h1> El id de su orden es : {orderId}</h1>;
+    return (
+      <h1 className="text-center title"> El id de su orden es : {orderId}</h1>
+    );
   }
   return (
     <div>
-      <h1>Checkout</h1>
+      <h1 className="text-center">Checkout</h1>
       <CheckoutForm onConfirm={createOrder} />
     </div>
   );

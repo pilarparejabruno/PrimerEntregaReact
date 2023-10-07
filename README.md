@@ -1,70 +1,40 @@
-# Getting Started with Create React App
+# Proyecto Final de Curso de React en CoderHouse
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## E-Commerce de Productos de Cosmética Natural y Vegana
 
-## Available Scripts
+¡Bienvenidos a mi proyecto final de curso de React en CoderHouse! Este proyecto representa la creación de un e-commerce especializado en productos de cosmética natural y vegana. A continuación un resumen de las características clave y las tecnologías utilizadas.
 
-In the project directory, you can run:
+## Descripción del Proyecto
 
-### `npm start`
+### Mi proyecto final ofrece una experiencia de compra única. Entre sus principales funcionalidades se incluyen:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- Catálogo de productos organizados en categorías.
+- Páginas de detalle de productos con información detallada y fotos.
+- Carrito de compras para agregar y eliminar productos.
+- Proceso de compra con formularios de envío y pago.
+- Autenticación de usuarios para gestionar sus pedidos.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Librerías Utilizadas
 
-### `npm test`
+### Para llevar a cabo este proyecto, utilicé diversas librerías a través de npm:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- Bootstrap: Bootstrap facilitó el diseño y la estructura del sitio web, asegurando que fuera receptivo y visualmente atractivo.
+- FontAwesome: Integré FontAwesome para enriquecer la experiencia del usuario con íconos vectoriales de alta calidad.
+- Google Fonts: Utilicé Google Fonts para mejorar la tipografía y garantizar una lectura cómoda en todo el sitio.
 
-### `npm run build`
+## Instrucciones para Ejecutar el Proyecto en tu Máquina
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Si deseas ejecutar este proyecto en tu máquina local, sigue estos pasos:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- Clona este repositorio en tu máquina local utilizando el siguiente comando:git clone <URL_DEL_REPOSITORIO>
+- Navega hasta la carpeta del proyecto:cd nombre-del-proyecto
+- Instala las dependencias utilizando npm: npm install
+- Una vez instaladas todas las dependencias, inicia la aplicación:npm start
+- Abre tu navegador web y visita http://localhost:3000 para explorar el sitio web en tu entorno local.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Agradezco a todos los tutores y profesor del curso por su apoyo durante la creación de este proyecto. Espero que disfruten explorando mi sitio web.
 
-### `npm run eject`
+¡Gracias por ser parte de mi proyecto final de curso de React en CoderHouse!
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Atentamente,
+Pilar.

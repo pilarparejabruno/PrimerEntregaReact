@@ -10,7 +10,7 @@ const CartWidget = () => {
 
   return (
     <div className="cartWidget">
-      <Link to="/cart">
+      <Link to="/cart" className="linkCartShopping">
         <FontAwesomeIcon icon={faCartShopping} />
         <span>{quantityInCarrito()}</span>
       </Link>

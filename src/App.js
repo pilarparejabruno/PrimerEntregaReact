@@ -18,6 +18,7 @@ import { CartProvider } from "./context/CartContext";
 
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { faCartShopping } from "@fortawesome/free-solid-svg-icons";
+import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
 
 function App() {
   return (
@@ -42,5 +43,5 @@ function App() {
   );
 }
 
-library.add(faCartShopping);
+library.add(faCartShopping, faArrowLeft);
 export default App;

@@ -56,10 +56,15 @@ const ItemListContainer = () => {
   return (
     <>
       <h1 className="text-center mt-5 mb-2 title">PRODUCTOS</h1>
+      <p className="text-center mt-5 paragraph">Categorias:</p>
       <div className="category-container text-center">
-        <div className="btn-group" role="group" aria-label="Basic example">
+        <div
+          className="btn-group paragraph "
+          role="group"
+          aria-label="Basic example"
+        >
           {RoutesCategories.map(({ path, linkname }) => (
-            <Link to={path} className="button btn btn-outline-dark">
+            <Link to={path} className="btnCategories  btn btn-outline-dark ">
               {linkname}
             </Link>
           ))}

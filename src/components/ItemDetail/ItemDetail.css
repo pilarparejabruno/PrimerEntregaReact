@@ -1,5 +1,6 @@
 .title {
   font-weight: 600;
+  font-family: "Montserrat", sans-serif;
   font-size: 30px;
   color: black;
 }
@@ -7,5 +8,22 @@
 .paragraph {
   font-weight: 300;
   font-size: 20px;
+  color: black;
+}
+
+.btnArrow-left {
+  display: block;
+  position: relative;
+  z-index: 2;
+  top: 40px;
+  right: -280px;
+}
+
+.CardItem {
+  margin: 0px 250px;
+}
+
+.icons {
+  font-size: 45px;
   color: black;
 }

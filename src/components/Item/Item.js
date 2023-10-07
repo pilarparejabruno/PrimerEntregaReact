@@ -21,7 +21,7 @@ const Item = ({ id, name, price, img }) => {
                 to={`/item/${id}`}
                 className=" button btn btn-outline-dark  "
               >
-                VER MÀS
+                VER DETALLE
               </Link>
             </div>
           </div>

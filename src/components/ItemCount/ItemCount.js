@@ -30,10 +30,10 @@ const ItemCount = ({ stock, initial, onAdd }) => {
         <button
           type="button"
           className="btn btn-outline-dark my-4 btnAgregarAlcarrito"
+          disabled={quantity === 0 || stock === 0}
           onClick={() => onAdd(quantity)}
-          disabled={!stock}
         >
-          AGREGAR AL CARRITO
+          {stock === 0 ? "SIN STOCK" : "  AGREGAR AL CARRITO"}
         </button>
       </div>
     </div>
